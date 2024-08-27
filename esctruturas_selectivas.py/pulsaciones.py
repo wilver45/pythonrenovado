@@ -1,11 +1,13 @@
-#las variables de obtoner los datos del usuario
-nombre=input("escriba su nombre ")
-sexo=input("masculinno o femenino ")
-edad=int(input("cuantos años tienes "))
-#defenir los valores de los datos de usuarios para calcular sus pulsaciones
+# Las variables para obtener los datos del usuario
+nombre = input("Escriba su nombre: ")
+sexo = input("Masculino o femenino: ").strip().lower()
+edad = int(input("¿Cuántos años tienes?: "))
+
+# Definir los valores de los datos de usuarios para calcular sus pulsaciones
 if sexo == "masculino":
-    num_pulsaciones=(210-edad)/10
+    numPulsaciones = (210 - edad) / 10
 elif sexo == "femenino":
-    num_pulsaciones=(220-edad)/10
-#impresion de los datos de usuarios
-print("el nombre es: {0} sexo es {1} su edad {2} años y el numero de sus pulsaciones son :{3}".format(nombre.capitalize(),sexo.capitalize(), edad,num_pulsaciones))
+    numPulsaciones = (220 - edad) / 10
+
+# Impresión de los datos de usuarios
+print("El nombre es: {0}, el sexo es: {1}, su edad es: {2} años, y el número de sus pulsaciones es: {3:.2f}".format(nombre.capitalize(), sexo.capitalize(), edad, numPulsaciones))
